@@ -1,25 +1,28 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+// import styled from 'styled-components';
+import { GlobalStyle } from './styles/GlobalStyles';
+import { Header } from './components/Header/Header';
+// import { ProductCard } from './components/ProductCard/ProductCard';
+import { ProductList } from './components/ProductList/ProductList';
+import { Provider } from 'react-redux';
+import { store } from './redux/store';
+import { Counter } from './components/Conter/Counter';
+
+
+//Componente estilizado
+// const Title = styled.h1`
+//   font-size: 2em;
+//   color: blue;
+// `;
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Provider store={store}>
+      <Header />
+      <ProductList />
+      <GlobalStyle />
+
+    </Provider>
   );
 }
 
