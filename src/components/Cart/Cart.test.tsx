@@ -1,5 +1,5 @@
 //^ Desnecessário quando se cria o arq. src/setupTests.js
-// import "@testing-library/jest-dom"
+import "@testing-library/jest-dom"
 import { render, screen } from "@testing-library/react";
 import { Cart } from "./Cart";
 import { products } from "../../data/products";
